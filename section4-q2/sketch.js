@@ -1,5 +1,5 @@
 // テキスト「アニメーション」
-let x, y, vx, vy;
+let x, y, vx, vy,angle;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
@@ -18,6 +18,7 @@ x+=vx;
 y+=vy;
 
 
+
   // 端の処理パターン (1) 反対側から出てくる
 //   if(x > width){ x = 0; }
 //   else if(x < 0){ x = width; }
@@ -32,7 +33,7 @@ if(y<0||y>height)
 {vy=-1*vy;}
 
   x=constrain(x,0,width);
-  y=constrain(x,0,heigth);
+  y=constrain(x,0,height);}
 
 
 function star(cx, cy, r, angle){
@@ -50,4 +51,8 @@ function star(cx, cy, r, angle){
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
+}
+function mouseClicked(){
+  x=mouseX;
+  y=mouseY;
 }
