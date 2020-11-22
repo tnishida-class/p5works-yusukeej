@@ -26,8 +26,10 @@ y+=vy;
 // }
 
 if(x < 0　　||　x> width){
-  vx=-1*vy;
+  vx=-1*vx;
 }
+if(y<0||y>height)
+{vy=-1*vy;}
 
   x=constrain(x,0,width);
   y=constrain(x,0,heigth);
